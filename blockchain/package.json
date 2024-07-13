@@ -1,0 +1,17 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "truffle migrate --reset",
+    "postmigrate": "npm run copy-contracts",
+    "copy-contracts": "copyfiles -u 2 build/contracts/GameVoting.json ../game-voting-app/src/services/contracts/ "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
